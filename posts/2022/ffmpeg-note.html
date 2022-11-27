@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>FFmpeg总结笔记 | Zhan Guangcheng&#39;s Blog</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?54bfcd7761b8bb514aff1b22dc3f34e2";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+      </script>
+    <meta name="description" content="去感受，去旅行，去学习，去爱。">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.3cb233de.css" as="style"><link rel="preload" href="/assets/js/app.d466d0a3.js" as="script"><link rel="preload" href="/assets/js/3.574d613d.js" as="script"><link rel="preload" href="/assets/js/1.ed8e001c.js" as="script"><link rel="preload" href="/assets/js/20.6a047f0a.js" as="script"><link rel="prefetch" href="/assets/js/10.ecffc3d8.js"><link rel="prefetch" href="/assets/js/11.8ccfeb85.js"><link rel="prefetch" href="/assets/js/12.fa7ebe9f.js"><link rel="prefetch" href="/assets/js/13.8f6b415b.js"><link rel="prefetch" href="/assets/js/14.4f5ab364.js"><link rel="prefetch" href="/assets/js/15.d15f6150.js"><link rel="prefetch" href="/assets/js/16.daa1fda5.js"><link rel="prefetch" href="/assets/js/17.0f567e87.js"><link rel="prefetch" href="/assets/js/18.1e8b8a34.js"><link rel="prefetch" href="/assets/js/19.1778a835.js"><link rel="prefetch" href="/assets/js/21.ca565f97.js"><link rel="prefetch" href="/assets/js/22.f5c1c00d.js"><link rel="prefetch" href="/assets/js/23.5f883789.js"><link rel="prefetch" href="/assets/js/24.e2f0cdc4.js"><link rel="prefetch" href="/assets/js/4.f30b6f2a.js"><link rel="prefetch" href="/assets/js/5.f455ed38.js"><link rel="prefetch" href="/assets/js/6.7f6599b6.js"><link rel="prefetch" href="/assets/js/7.a5e631fa.js"><link rel="prefetch" href="/assets/js/8.59615559.js"><link rel="prefetch" href="/assets/js/9.87031a6f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.3cb233de.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>Zhan Guangcheng's Blog</h3> <p class="description" data-v-59e6cb88>去感受，去旅行，去学习，去爱。</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>Zhan Guangcheng</span>
+          
+        <!---->
+        2022
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Zhan Guangcheng's Blog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/CSS/" class="nav-link"><i class="undefined"></i>
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Git/" class="nav-link"><i class="undefined"></i>
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Http/" class="nav-link"><i class="undefined"></i>
+  Http
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Markdown/" class="nav-link"><i class="undefined"></i>
+  Markdown
+</a></li><li class="dropdown-item"><!----> <a href="/categories/MySQL/" class="nav-link"><i class="undefined"></i>
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Yii/" class="nav-link"><i class="undefined"></i>
+  Yii
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Linux/" class="nav-link"><i class="undefined"></i>
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Nginx/" class="nav-link"><i class="undefined"></i>
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/categories/正则表达式/" class="nav-link"><i class="undefined"></i>
+  正则表达式
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><img src="/avatar-top.png" alt="author-avatar" class="personal-img" data-v-1fad0c41> <h3 class="name" data-v-1fad0c41>
+    Zhan Guangcheng
+  </h3> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>14</h3> <h6 data-v-1fad0c41>Articles</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>12</h3> <h6 data-v-1fad0c41>Tags</h6></div></div> <ul class="social-links" data-v-1fad0c41><li class="social-item" data-v-1fad0c41><i class="iconfont reco-github" style="color:#f8b26a;" data-v-1fad0c41></i></li></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/CSS/" class="nav-link"><i class="undefined"></i>
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Git/" class="nav-link"><i class="undefined"></i>
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Http/" class="nav-link"><i class="undefined"></i>
+  Http
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Markdown/" class="nav-link"><i class="undefined"></i>
+  Markdown
+</a></li><li class="dropdown-item"><!----> <a href="/categories/MySQL/" class="nav-link"><i class="undefined"></i>
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Yii/" class="nav-link"><i class="undefined"></i>
+  Yii
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Linux/" class="nav-link"><i class="undefined"></i>
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Nginx/" class="nav-link"><i class="undefined"></i>
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/categories/正则表达式/" class="nav-link"><i class="undefined"></i>
+  正则表达式
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>FFmpeg总结笔记</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>Zhan Guangcheng</span>
+          
+        <!---->
+        2022
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">FFmpeg总结笔记</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>Zhan Guangcheng</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>11/27/2022</span></i> <i class="iconfont reco-eye" data-v-8a445198><span id="/posts/2022/ffmpeg-note.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-8a445198><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="tags iconfont reco-tag" data-v-8a445198><span class="tag-item" data-v-8a445198>Linux</span></i></div></div> <div class="theme-reco-content content__default"><h2 id="简介"><a href="#简介" class="header-anchor">#</a> 简介</h2> <p><a href="https://ffmpeg.org/" target="_blank" rel="noopener noreferrer">FFmpeg<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>（Fast Forward MPEG） 是视频处理最常用的开源软件。它可以用来处理音视频的编解码、格式转换、剪辑、合并、抽取、压缩、解压缩、滤镜、字幕等等。大量用于视频网站和商业软件（比如 Youtube 和 iTunes）
+</p> <p>官方文档</p> <ul><li><a href="https://ffmpeg.org/ffmpeg.html" target="_blank" rel="noopener noreferrer">ffmpeg<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>: ffmpeg tool</li> <li><a href="https://ffmpeg.org/ffmpeg-all.html" target="_blank" rel="noopener noreferrer">ffmpeg-all<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>: ffmpeg tool and FFmpeg components</li></ul> <h2 id="ffmpeg-工作流程"><a href="#ffmpeg-工作流程" class="header-anchor">#</a> FFmpeg 工作流程</h2> <ol><li>读取输入源</li> <li>进行音视频的解封装</li> <li>解码每一帧音视频数据</li> <li>编码每一帧音视频数据</li> <li>进行音视频的重新封装</li> <li>输出到目标</li></ol> <h2 id="ffmpeg-的安装"><a href="#ffmpeg-的安装" class="header-anchor">#</a> FFmpeg 的安装</h2> <p>Centos7 ffmpeg的安装</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 依赖准备</span>
+yum <span class="token function">install</span> <span class="token parameter variable">-y</span> gcc gcc-c++
+yum <span class="token function">install</span> <span class="token parameter variable">-y</span> openssl openssl-devel
+
+<span class="token comment"># 安装yasm，Yasm是一个汇编器</span>
+<span class="token builtin class-name">cd</span> /usr/local/src
+<span class="token function">wget</span> http://www.tortall.net/projects/yasm/releases/yasm-1.3.0.tar.gz
+<span class="token function">tar</span> <span class="token parameter variable">-zxf</span> yasm-1.3.0.tar.gz
+<span class="token builtin class-name">cd</span> yasm-1.3.0
+./configure
+<span class="token function">make</span> <span class="token operator">&amp;&amp;</span> <span class="token function">make</span> <span class="token function">install</span>
+
+<span class="token comment"># mp3支持，lame是目前非常优秀的一种MP3编码引擎</span>
+<span class="token builtin class-name">cd</span> /usr/local/src
+<span class="token function">wget</span> https://nchc.dl.sourceforge.net/project/lame/lame/3.100/lame-3.100.tar.gz
+<span class="token function">tar</span> <span class="token parameter variable">-zxf</span> lame-3.100.tar.gz
+<span class="token builtin class-name">cd</span> lame-3.100
+./configure
+<span class="token function">make</span> <span class="token operator">&amp;&amp;</span> <span class="token function">make</span> <span class="token function">install</span>
+<span class="token function">ln</span> <span class="token parameter variable">-s</span> /usr/local/lib/libmp3lame.so.0 /usr/lib64/libmp3lame.so.0
+
+<span class="token comment"># 安装ffmpeg</span>
+<span class="token builtin class-name">cd</span> /usr/local/src
+<span class="token function">wget</span> http://ffmpeg.org/releases/ffmpeg-4.4.tar.gz
+<span class="token function">tar</span> <span class="token parameter variable">-zxf</span> ffmpeg-4.4.tar.gz
+<span class="token builtin class-name">cd</span> ffmpeg-4.4
+./configure <span class="token parameter variable">--prefix</span><span class="token operator">=</span>/usr/local/ffmpeg --enable-shared --enable-libmp3lame --enable-openssl
+<span class="token function">make</span> <span class="token operator">&amp;&amp;</span> <span class="token function">make</span> <span class="token function">install</span>
+
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;/usr/local/ffmpeg/lib&quot;</span> <span class="token operator">&gt;&gt;</span> /etc/ld.so.conf
+ldconfig
+<span class="token builtin class-name">echo</span> <span class="token string">'export PATH=$PATH:/usr/local/ffmpeg/bin'</span> <span class="token operator">&gt;&gt;</span> /etc/profile
+<span class="token builtin class-name">source</span> /etc/profile
+</code></pre></div><h2 id="ffmpeg-的使用格式及常用参数"><a href="#ffmpeg-的使用格式及常用参数" class="header-anchor">#</a> FFmpeg 的使用格式及常用参数</h2> <div class="language- extra-class"><pre class="language-text"><code>ffmpeg [全局参数] {[输入文件参数] -i 输入文件地址} ... {[输出文件参数] 输出文件地址} ...
+</code></pre></div><ul><li>-hide_banner 隐藏版权声明</li> <li>-y 覆盖输出文件</li> <li>-i 输入文件</li> <li>-f 指定输出文件格式</li> <li>-c copy 直接拷贝，不经过转码，速度更快</li> <li>-r 指定帧率，默认1秒截图25次，可使用小数，r=1/多少秒截一张</li> <li>-an 禁用音频</li> <li>-vn 禁用视频</li> <li>-ar 设置音频采样率 96k, 112k, 128k, 160k, 192k, 256k, 320k</li> <li>-ac 设置音频通道数</li> <li>-ab | -b:a 设置音频比特率</li> <li>-c:v：指定视频编码器</li> <li>-c:a：指定音频编码器</li> <li>-t：指定转码时长</li> <li>-ss：指定转码开始时间</li> <li>-vf video filters，指定简单滤镜，指定宽，高度比例缩放：scale=320:-1</li> <li>-filter_complex 指定复杂滤镜</li></ul> <h2 id="ffmpeg-的常见用法"><a href="#ffmpeg-的常见用法" class="header-anchor">#</a> FFmpeg 的常见用法</h2> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment">#查看文件信息</span>
+ffmpeg <span class="token parameter variable">-i</span> input.mp4 <span class="token parameter variable">-f</span> null /dev/null
+
+<span class="token comment">#提取音频</span>
+ffmpeg <span class="token parameter variable">-i</span> input.mp4 <span class="token parameter variable">-f</span> mp3 output.mp3
+
+<span class="token comment">#提取音频，指定采样率、比特率、通道数</span>
+ffmpeg <span class="token parameter variable">-i</span> input.mp4 <span class="token parameter variable">-vn</span> <span class="token parameter variable">-ar</span> <span class="token number">16000</span> <span class="token parameter variable">-ac</span> <span class="token number">1</span> <span class="token parameter variable">-b:a</span> 8k <span class="token parameter variable">-f</span> mp3 output.mp3
+
+<span class="token comment">#提取图片关键帧</span>
+ffmpeg <span class="token parameter variable">-i</span> input.mp4 <span class="token parameter variable">-f</span> image2 <span class="token parameter variable">-an</span> <span class="token parameter variable">-r</span> <span class="token number">1</span> output/image%d.jpg
+
+<span class="token comment">#从指定时间开始，连续对1秒钟的视频进行截图</span>
+ffmpeg <span class="token parameter variable">-i</span> input.mp4 <span class="token parameter variable">-f</span> image2 <span class="token parameter variable">-an</span> <span class="token parameter variable">-ss</span> 00:01:24 <span class="token parameter variable">-t</span> 00:00:01 output/image%d.jpg
+
+<span class="token comment">#提取一张图片</span>
+ffmpeg <span class="token parameter variable">-i</span> input.mp4 <span class="token parameter variable">-f</span> image2 <span class="token parameter variable">-an</span> <span class="token parameter variable">-vframes</span> <span class="token number">1</span> <span class="token parameter variable">-q:v</span> <span class="token number">2</span> output.jpg
+
+<span class="token comment">#获取分贝（dBFS）信息，现实生活中使用的是dBSPL</span>
+ffmpeg <span class="token parameter variable">-i</span> input.mp4 <span class="token parameter variable">-filter_complex</span> volumedetect <span class="token parameter variable">-c:v</span> copy <span class="token parameter variable">-f</span> null /dev/null
+
+<span class="token comment">#转换视频格式</span>
+ffmpeg <span class="token parameter variable">-i</span> input.mp4 <span class="token parameter variable">-c</span> copy output.avi
+
+<span class="token comment">#改变视频分辨率为480P</span>
+ffmpeg <span class="token parameter variable">-i</span> input.mp4 <span class="token parameter variable">-vf</span> <span class="token assign-left variable">scale</span><span class="token operator">=</span><span class="token number">480</span>:-1 output.mp4
+
+<span class="token comment">#多个输出</span>
+ffmpeg <span class="token parameter variable">-i</span> input.mp4 <span class="token parameter variable">-c</span> copy output1.avi <span class="token parameter variable">-vf</span> <span class="token assign-left variable">scale</span><span class="token operator">=</span><span class="token number">480</span>:-1 output2.mp4
+</code></pre></div><h2 id="在php中如何调用ffmpeg"><a href="#在php中如何调用ffmpeg" class="header-anchor">#</a> 在PHP中如何调用FFmpeg</h2> <p><a href="https://github.com/zhanguangcheng/ffmpeg-php" target="_blank" rel="noopener noreferrer">ffmpeg-php<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>是一个在PHP中调用ffmpeg的简单实现库，有以下几个方法：</p> <ul><li>input() 指定输入文件</li> <li>output() 添加输出文件</li> <li>save() 执行保存</li></ul> <h2 id="更多"><a href="#更多" class="header-anchor">#</a> 更多</h2> <ul><li><a href="https://ruanyifeng.com/blog/2020/01/ffmpeg.html" target="_blank" rel="noopener noreferrer">阮一峰 FFmpeg 视频处理入门教程<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://www.zhihu.com/question/484680728/answer/2764667058" target="_blank" rel="noopener noreferrer">FFmpeg 开发笔记1<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://www.zhihu.com/question/300182407/answer/2305522546" target="_blank" rel="noopener noreferrer">FFmpeg 开发笔记2<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://github.com/0voice/ffmpeg_develop_doc" target="_blank" rel="noopener noreferrer">最新ffmpeg资料整理<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://zhuanlan.zhihu.com/p/457381792" target="_blank" rel="noopener noreferrer">一次性搞懂dBSPL、dBm、dBu、dBV、dBFS的区别！<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul> <blockquote><p>🕑 最后更新时间: 2022-11-27 17:57</p></blockquote></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/posts/2022/ffmpeg-note.html#简介" class="sidebar-link reco-side-简介" data-v-b57cc07c>简介</a></li><li class="level-2" data-v-b57cc07c><a href="/posts/2022/ffmpeg-note.html#ffmpeg-工作流程" class="sidebar-link reco-side-ffmpeg-工作流程" data-v-b57cc07c>FFmpeg 工作流程</a></li><li class="level-2" data-v-b57cc07c><a href="/posts/2022/ffmpeg-note.html#ffmpeg-的安装" class="sidebar-link reco-side-ffmpeg-的安装" data-v-b57cc07c>FFmpeg 的安装</a></li><li class="level-2" data-v-b57cc07c><a href="/posts/2022/ffmpeg-note.html#ffmpeg-的使用格式及常用参数" class="sidebar-link reco-side-ffmpeg-的使用格式及常用参数" data-v-b57cc07c>FFmpeg 的使用格式及常用参数</a></li><li class="level-2" data-v-b57cc07c><a href="/posts/2022/ffmpeg-note.html#ffmpeg-的常见用法" class="sidebar-link reco-side-ffmpeg-的常见用法" data-v-b57cc07c>FFmpeg 的常见用法</a></li><li class="level-2" data-v-b57cc07c><a href="/posts/2022/ffmpeg-note.html#在php中如何调用ffmpeg" class="sidebar-link reco-side-在php中如何调用ffmpeg" data-v-b57cc07c>在PHP中如何调用FFmpeg</a></li><li class="level-2" data-v-b57cc07c><a href="/posts/2022/ffmpeg-note.html#更多" class="sidebar-link reco-side-更多" data-v-b57cc07c>更多</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.d466d0a3.js" defer></script><script src="/assets/js/3.574d613d.js" defer></script><script src="/assets/js/1.ed8e001c.js" defer></script><script src="/assets/js/20.6a047f0a.js" defer></script>
+  </body>
+</html>
